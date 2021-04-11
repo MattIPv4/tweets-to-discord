@@ -4,13 +4,13 @@ account_id = "fb1f542488f2441acf88ca15f3a8390d"
 workers_dev = true
 webpack_config = "webpack.config.js"
 kv_namespaces = [
-    { binding = "TWEETS_TO_DISCORD_LAST_TWEET", id = "4fc9f04e2f29425c878cf74200359002", preview_id = "4fc9f04e2f29425c878cf74200359002" }
+    { binding = "TWEETS_TO_DISCORD_LAST_TWEET", id = "f22f1aee1f3642bcaa81eaf306528577", preview_id = "f22f1aee1f3642bcaa81eaf306528577" }
 ]
 
 [triggers]
-crons = ["* * * * *"]
+crons = ["*/2 * * * *"]
 
 [env.production]
 kv_namespaces = [
-    { binding = "TWEETS_TO_DISCORD_LAST_TWEET", id = "e8a41596dbff45ab84f7833da8834bbb" }
+    { binding = "TWEETS_TO_DISCORD_LAST_TWEET", id = "87d5c2be0d2342f680bec6a0b20a372d" }
 ]
