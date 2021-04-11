@@ -1,0 +1,28 @@
+{
+  "name": "tweets-to-discord",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development wrangler dev",
+    "publish:production": "NODE_ENV=production wrangler publish -e production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattIPv4/tweets-to-discord.git"
+  },
+  "author": "Matt (IPv4) Cowley",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MattIPv4/tweets-to-discord/issues"
+  },
+  "homepage": "https://github.com/MattIPv4/tweets-to-discord#readme",
+  "dependencies": {
+    "workers-sentry": "0.0.5"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "webpack": "^4.46.0"
+  }
+}

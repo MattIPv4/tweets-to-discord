@@ -1,0 +1,16 @@
+name = "tweets-to-discord"
+type = "webpack"
+account_id = "fb1f542488f2441acf88ca15f3a8390d"
+workers_dev = true
+webpack_config = "webpack.config.js"
+kv_namespaces = [
+    { binding = "TWEETS_TO_DISCORD_LAST_TWEET", id = "4fc9f04e2f29425c878cf74200359002", preview_id = "4fc9f04e2f29425c878cf74200359002" }
+]
+
+[triggers]
+crons = ["* * * * *"]
+
+[env.production]
+kv_namespaces = [
+    { binding = "TWEETS_TO_DISCORD_LAST_TWEET", id = "e8a41596dbff45ab84f7833da8834bbb" }
+]
