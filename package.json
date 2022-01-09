@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/MattIPv4/tweets-to-discord#readme",
   "dependencies": {
+    "html-entities": "^2.3.2",
     "workers-sentry": "^0.0.6"
   },
   "devDependencies": {

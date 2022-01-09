@@ -1,4 +1,5 @@
 const WorkersSentry = require('workers-sentry/worker');
+const htmlEntities = require('html-entities');
 
 // Util to send a text response
 const textResponse = content => new Response(content, {
@@ -41,7 +42,7 @@ const postDiscordTweet = (type, content, links, username, avatar) => fetch(proce
     method: 'POST',
     headers: { 'Content-type': 'application/json' },
     body: JSON.stringify({
-        content: `**${type}**\n\n${quoteText(escapeMarkdown(content))}\n\n${suppressLinks(links)}`,
+        content: `**${type}**\n\n${quoteText(escapeMarkdown(htmlEntities.decode(content)))}\n\n${suppressLinks(links)}`,
         username,
         avatar_url: avatar,
     }),
