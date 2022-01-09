@@ -1,3 +1,5 @@
+/* global TWEETS_TO_DISCORD_LAST_TWEET */
+
 const WorkersSentry = require('workers-sentry/worker');
 const htmlEntities = require('html-entities');
 
@@ -102,10 +104,14 @@ const mirrorLatestTweets = async () => {
 
     // Process each tweet
     for (const tweet of tweets) {
+        // Send the tweet to Discord
         console.log(await processTweet(tweet, data.includes).then(res => res.text()));
 
         // Store this as the most recent tweet we've processed
         await TWEETS_TO_DISCORD_LAST_TWEET.put('latest_id', tweet.id);
+
+        // Wait a bit to avoid hitting the rate limit
+        await new Promise(resolve => setTimeout(resolve, 250));
     }
 };
 
