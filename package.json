@@ -19,10 +19,11 @@
   },
   "homepage": "https://github.com/MattIPv4/tweets-to-discord#readme",
   "dependencies": {
-    "workers-sentry": "0.0.5"
+    "workers-sentry": "^0.0.6"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
+    "@cloudflare/wrangler": "^1.19.7",
+    "dotenv": "^10.0.0",
     "webpack": "^4.46.0"
   }
 }
