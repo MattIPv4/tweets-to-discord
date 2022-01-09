@@ -3,6 +3,7 @@ type = "webpack"
 account_id = "fb1f542488f2441acf88ca15f3a8390d"
 workers_dev = true
 webpack_config = "webpack.config.js"
+compatibility_date = "2022-01-09"
 kv_namespaces = [
     { binding = "TWEETS_TO_DISCORD_LAST_TWEET", id = "f22f1aee1f3642bcaa81eaf306528577", preview_id = "f22f1aee1f3642bcaa81eaf306528577" }
 ]
